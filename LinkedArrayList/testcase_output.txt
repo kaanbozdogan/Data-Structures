@@ -1,0 +1,149 @@
+------- LIST METHODS -------
+----------------------------
+
+Initializing the List with add(element)
+for ( 1 -> 9 ) list.add(i)
+
+1. Node:   1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 -  size:9
+_______________________________
+
+size(): 9
+_______________________________
+
+printing with get(index)
+for ( 0 -> size() ) list.get(i)
+
+1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 
+_______________________________
+Adding to Tail Node with space
+add(10)
+1. Node:   1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 -  size:10
+
+_______________________________
+Adding to Tail Node with maximum size
+
+add(11)
+
+1. Node:   1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 -  size:10
+2. Node:   11 -  size:1
+_______________________________
+Adding to a Node with enough space for a new element
+
+add(11,12)
+
+1. Node:   1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 -  size:10
+2. Node:   11 - 12 -  size:2
+_______________________________
+Adding to a Node with maximum size
+
+add(7,99)
+
+1. Node:   1 - 2 - 3 - 4 - 5 -  size:5
+2. Node:   6 - 7 - 99 - 8 - 9 - 10 -  size:6
+3. Node:   11 - 12 -  size:2
+_______________________________
+Adding to an out of bound index
+
+add(20,-1)
+
+IndexOutOfBoundsException thrown
+_______________________________
+Removing from list using index
+
+remove(6)
+
+1. Node:   1 - 2 - 3 - 4 - 5 -  size:5
+2. Node:   6 - 99 - 8 - 9 - 10 -  size:5
+3. Node:   11 - 12 -  size:2
+_______________________________
+Removing from list using an out of bounds index
+
+remove(20)
+
+IndexOutOfBoundsException thrown
+_______________________________
+Removing from list using element
+
+print( remove(99) ) = true
+
+1. Node:   1 - 2 - 3 - 4 - 5 -  size:5
+2. Node:   6 - 8 - 9 - 10 -  size:4
+3. Node:   11 - 12 -  size:2
+_______________________________
+Removing from list using an element which does not exist int he list
+
+remove(20) = false
+
+1. Node:   1 - 2 - 3 - 4 - 5 -  size:5
+2. Node:   6 - 8 - 9 - 10 -  size:4
+3. Node:   11 - 12 -  size:2
+_______________________________
+
+
+
+
+------- ITERATOR METHODS -------
+--------------------------------
+
+Initializing iterator with listIterator()
+
+iterator = listIterator()
+_______________________________
+Printing the list using hasNext() and next()
+
+while(it.hasNext()) print(it.next())
+
+1 - 2 - 3 - 4 - 5 - 6 - 8 - 9 - 10 - 11 - 12 - 
+_______________________________
+Trying to use next() while there is no next element
+
+NoSuchElementException thrown
+_______________________________
+Printing the list using hasPrevious() and previous()
+
+while(it.hasPrevious()) print(it.previous())
+
+12 - 11 - 10 - 9 - 8 - 6 - 5 - 4 - 3 - 2 - 1 - 
+_______________________________
+Trying to use previous() while there is no previous element
+
+NoSuchElementException thrown
+_______________________________
+Initializing iterator with listIterator(index)
+
+iterator = listIterator(6)
+
+_______________________________
+Adding to where iterator iterates
+add(99)
+
+1. Node:   1 - 2 - 3 - 4 - 5 -  size:5
+2. Node:   6 - 99 - 8 - 9 - 10 -  size:5
+3. Node:   11 - 12 -  size:2
+
+_______________________________
+Removing the element that returned by a previously called next()
+next() -> remove()
+
+1. Node:   1 - 2 - 3 - 4 - 5 -  size:5
+2. Node:   6 - 99 - 9 - 10 -  size:4
+3. Node:   11 - 12 -  size:2
+
+_______________________________
+Trying to remove element right after a call to remove(), not next() or previous()
+remove()
+
+IllegalStateException thrown
+_______________________________
+Setting the element returned from previously called previous()
+previous() -> set(0)
+
+1. Node:   1 - 2 - 3 - 4 - 5 -  size:5
+2. Node:   6 - 0 - 9 - 10 -  size:4
+3. Node:   11 - 12 -  size:2
+
+_______________________________
+Trying to set right after a call to add(), not next() or previous()
+add(-1) -> set(0)
+
+IllegalStateException thrown
