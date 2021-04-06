@@ -1,0 +1,82 @@
+System constructed and files added to the system with below codes
+
+myFileSystem.addDir("root/first_directory")
+myFileSystem.addDir("root/second_directory")
+myFileSystem.addFile("root/first_directory/new_file.txt")
+myFileSystem.addDir("root/second_directory/new_directory")
+myFileSystem.addFile("root/second_directory/new_directory/new_file.doc")
+
+___File System___
+root
+  first_directory
+    new_file.txt
+  second_directory
+    new_directory
+      new_file.doc
+
+-> Trying to add a directory and a file to a file. Files can not have children:
+
+addDir("root/first_directory/new_file.txt/illegal.txt")
+File path includes a file as a directory! Request denied.
+
+addFile("root/first_directory/new_file.txt/illegal.txt")
+File path includes a file as a directory! Request denied.
+
+
+-> Trying to add a directory and a file with a path that does not exist:
+
+addDir("root/illegal/illegal_dir")
+Illegal file path! Request denied.
+
+addFile("root/illegal/illegal.txt")
+Illegal file path! Request denied.
+
+
+-> Trying to add a file and directory which has the same name with a file in the current directory:
+
+addDir("root/second_directory/new_directory")
+Directory already contains a file with the same name.
+
+addFile("root/first_directory/new_file.txt")
+Directory already contains a file with the same name.
+
+
+-> Trying to remove a file that does not exist:
+
+remove("root/illegal_dir")
+File does not exist! Request denied.
+
+
+-> Trying to remove with a path that does not exist:
+
+remove("root/illegal_dir/illegal")
+Illegal file path! Request denied.
+
+
+-> Removing a file:
+
+remove("root/first_directory/new_file.txt")
+
+___File System___
+root
+  first_directory
+  second_directory
+    new_directory
+      new_file.doc
+
+
+-> Removing a directory which includes some other contents. Asks the user:
+
+remove("root/second_directory/new_directory")
+The file you wanted to delete includes some other directories:
+
+new_directory
+  new_file.doc
+
+
+Do you want to proceed? (y/n)
+y
+___File System___
+root
+  first_directory
+  second_directory
