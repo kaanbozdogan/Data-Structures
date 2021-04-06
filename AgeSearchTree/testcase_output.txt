@@ -1,0 +1,49 @@
+________________________________
+-> Initializing the three using add() with inputs in order "10,10,5,6,6,6,4,15,13,13"
+________________________________
+-> Printing the tree using toString()
+10	-	2
+5	-	1
+4	-	1
+6	-	3
+15	-	1
+13	-	2
+
+________________________________
+-> Finding an age data which exist in the tree
+6	-	3
+
+________________________________
+-> Finding an age data which does not exist in the tree
+null
+________________________________
+-> youngerThan(10): 5
+________________________________
+-> olderThan(10): 3
+________________________________
+-> Removing an age with multiple members -> remove(6)
+Item Removed: true
+10	-	2
+5	-	1
+4	-	1
+6	-	2
+15	-	1
+13	-	2
+
+________________________________
+-> Removing an age with one members -> remove(5)
+Item Removed: true
+10	-	2
+4	-	1
+6	-	2
+15	-	1
+13	-	2
+
+________________________________
+-> Removing an age which does not exist -> remove(99)
+Item Removed: false
+10	-	2
+4	-	1
+6	-	2
+15	-	1
+13	-	2
