@@ -1,0 +1,168 @@
+----- DEQUE METHODS -----
+___________________________________
+
+Initializing the list with add()
+for(i=1 to 9) add(i)
+1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 
+___________________________________
+
+addFirst(0)
+0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 
+___________________________________
+
+addLast(10)
+0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 
+___________________________________
+
+offerFirst(-1)
+-1 , 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 
+___________________________________
+
+offerLast(11)
+-1 , 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11 , 
+___________________________________
+
+removeFirst()
+removed element: -1
+0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11 , 
+___________________________________
+
+removeLast()
+removed element: 11
+0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 
+___________________________________
+
+pollFirst()
+removed element: 0
+1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 
+___________________________________
+
+pollLast()
+removed element: 10
+1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 
+___________________________________
+
+getFirst(): 1
+___________________________________
+
+getLast(): 9
+___________________________________
+
+peekFirst(): 1
+___________________________________
+
+peekLast(): 9
+___________________________________
+
+remove()
+removed element: 1
+2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 
+___________________________________
+
+poll()
+removed element: 9
+2 , 3 , 4 , 5 , 6 , 7 , 8 , 
+___________________________________
+
+element(): 2
+___________________________________
+
+peek(): 2
+___________________________________
+
+push(99)
+99 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 
+___________________________________
+
+pop()
+2 , 3 , 4 , 5 , 6 , 7 , 8 , 
+___________________________________
+
+size(): 7
+___________________________________
+
+isEmpty(): false
+___________________________________
+
+contains(2): true
+___________________________________
+
+remove(2): true
+___________________________________
+
+contains(2): false
+___________________________________
+
+remove(2): false
+___________________________________
+
+clear()
+___________________________________
+
+size(): 0
+___________________________________
+
+isEmpty(): true
+___________________________________
+
+Trying all remove and get methods while the deque is empty.
+
+
+removeFirst() -> NoSuchElementException thrown. Deque is empty.
+
+removeLast()() -> NoSuchElementException thrown. Deque is empty.
+
+pollFirst() -> returns null
+
+pollLast() -> returns null
+
+getFirst() -> NoSuchElementException thrown. Deque is empty.
+
+getLast() -> NoSuchElementException thrown. Deque is empty.
+
+peekFirst() -> returns null
+
+peekLast() -> returns null
+
+remove() -> NoSuchElementException thrown. Deque is empty.
+
+poll() -> NoSuchElementException thrown. Deque is empty.
+
+element() -> NoSuchElementException thrown. Deque is empty.
+
+peek() -> returns null
+
+pop() -> NoSuchElementException thrown. Deque is empty.
+
+removeFirstOccurrence() -> returns false
+
+removeLastOccurrence() -> returns false
+___________________________________
+
+Initializing the deque to test occurrence remove methods
+Deque elements -> 1 , 0 , 1 , 0 , 1 , 0 , 1 , 
+___________________________________
+
+removeFirstOccurrence(0)
+1 , 1 , 0 , 1 , 0 , 1 , 
+___________________________________
+
+removeLastOccurrence(0)
+1 , 1 , 0 , 1 , 1 , 
+
+
+
+----- ITERATOR METHODS -----
+___________________________________
+
+Initializing the list with add()
+for(i=1 to 5) add(i)
+1 , 2 , 3 , 4 , 5 , 
+___________________________________
+
+Iterating through the deque with standard iterator
+1 , 2 , 3 , 4 , 5 , 
+___________________________________
+
+Iterating through the deque with descending iterator
+5 , 4 , 3 , 2 , 1 ,
